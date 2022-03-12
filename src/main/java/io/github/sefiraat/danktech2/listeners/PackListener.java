@@ -17,6 +17,7 @@ import io.github.sefiraat.danktech2.utils.datatypes.PersistentTrashInstanceType;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
+import net.guizhanss.guizhanlib.minecraft.helper.inventory.ItemStackHelper;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Material;
@@ -57,7 +58,7 @@ public class PackListener implements Listener {
 
             if (dankPackInstance == null) {
                 player.sendMessage(MessageFormat.format(
-                    "{0}Dank Pack not crafted - creating new instance",
+                    "{0}无底背包为空 - 正在初始化",
                     ThemeType.WARNING.getColor())
                 );
                 dankPackInstance = generateNewDankInstance(heldItem, dankPack.getTier());
@@ -65,7 +66,7 @@ public class PackListener implements Listener {
 
             if (ConfigManager.getInstance().checkDankDeletion(dankPackInstance.getId())) {
                 player.sendMessage(MessageFormat.format(
-                    "{0}Dank Pack has been duped or deleted. Removing",
+                    "{0}无底背包已被复制或删除 - 正在移除",
                     ThemeType.ERROR.getColor())
                 );
                 heldItem.setAmount(0);
@@ -91,7 +92,7 @@ public class PackListener implements Listener {
 
                 if (trashPackInstance == null) {
                     player.sendMessage(MessageFormat.format(
-                        "{0}Trash Pack not crafted - creating new instance",
+                        "{0}无底垃圾桶为空 - 正在初始化",
                         ThemeType.WARNING.getColor())
                     );
                     trashPackInstance = generateNewTrashInstance(heldItem, trashPack.getTier());
@@ -106,11 +107,11 @@ public class PackListener implements Listener {
     private void incrementSlot(ItemStack heldItem, DankPackInstance dankPackInstance, Player player) {
         int slot = DataTypeMethods.incrementSelectedSlot(heldItem);
         ItemStack itemStack = dankPackInstance.getItem(slot);
-        String name = itemStack == null ? "Nothing" : ThemeType.toTitleCase(itemStack.getType().toString());
+        String name = itemStack == null ? "无物品" : ThemeType.toTitleCase(itemStack.getType().toString());
         player.spigot().sendMessage(
             ChatMessageType.ACTION_BAR,
             TextComponent.fromLegacyText(MessageFormat.format(
-                "{0}Selected slot: [{1}] - [{2}]",
+                "{0}已选择栏位: [{1}] - [{2}]",
                 ThemeType.SUCCESS.getColor(),
                 slot + 1,
                 name)
@@ -126,19 +127,20 @@ public class PackListener implements Listener {
             player.spigot().sendMessage(
                 ChatMessageType.ACTION_BAR,
                 TextComponent.fromLegacyText(MessageFormat.format(
-                    "{0}Not enough {1} left!",
+                    "{0}{1} 数量不足，无法放置!",
                     ThemeType.ERROR.getColor(),
-                    ThemeType.toTitleCase(stackToPlace.getType().toString()))
-                )
+                    ItemStackHelper.getDisplayName(stackToPlace)
+                ))
             );
         } else if (!stackToPlace.getType().isBlock() || stackToPlace.hasItemMeta()) {
             player.spigot().sendMessage(
                 ChatMessageType.ACTION_BAR,
                 TextComponent.fromLegacyText(MessageFormat.format(
-                    "{0}{1} cannot be placed like this.",
+                    "{0}{1} {2} 无法放置.",
                     ThemeType.ERROR.getColor(),
-                    ThemeType.toTitleCase(stackToPlace.getType().toString()))
-                )
+                    ItemStackHelper.getDisplayName(stackToPlace),
+                    ThemeType.ERROR.getColor()
+                ))
             );
         } else {
             if (isSafeToBuild(block, player)) {

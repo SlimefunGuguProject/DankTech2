@@ -50,15 +50,15 @@ public class DankCrafter extends SlimefunItem {
 
     private static final CustomItemStack CRAFT_BUTTON_STACK = new CustomItemStack(
         Material.JUKEBOX,
-        ThemeType.CLICK_INFO.getColor() + "Click to upgrade"
+        ThemeType.CLICK_INFO.getColor() + "点击升级"
     );
 
     public static final RecipeType TYPE = new RecipeType(
         Keys.newKey("dank_crafter"),
         new CustomItemStack(
             Material.JUKEBOX,
-            "Dank Upgrader",
-            "Crafted within the Dank Crafter"
+            "无底合成机",
+            "在无底合成机中合成"
         ),
         DankCrafter::addRecipe
     );

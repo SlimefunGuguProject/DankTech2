@@ -57,10 +57,9 @@ public class Materials {
                 "DK2_CELL_1",
                 Skulls.CELL_1.getPlayerHead(),
                 ThemeType.CRAFTING,
-                "Dank Cell - Tier 1",
-                "A Dank Cell serves to provide a way",
-                "to make the inside bigger than the",
-                "outside."
+                "无底单元 - 等级 1",
+                "无底单元可以在内部创建一个",
+                "比外部更大的空间"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -77,10 +76,9 @@ public class Materials {
                 "DK2_CELL_2",
                 Skulls.CELL_2.getPlayerHead(),
                 ThemeType.CRAFTING,
-                "Dank Cell - Tier 2",
-                "A Dank Cell serves to provide a way",
-                "to make the inside bigger than the",
-                "outside."
+                "无底单元 - 等级 2",
+                "无底单元可以在内部创建一个",
+                "比外部更大的空间"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -97,10 +95,9 @@ public class Materials {
                 "DK2_CELL_3",
                 Skulls.CELL_3.getPlayerHead(),
                 ThemeType.CRAFTING,
-                "Dank Cell - Tier 3",
-                "A Dank Cell serves to provide a way",
-                "to make the inside bigger than the",
-                "outside."
+                "无底单元 - 等级 3",
+                "无底单元可以在内部创建一个",
+                "比外部更大的空间"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -117,10 +114,9 @@ public class Materials {
                 "DK2_CELL_4",
                 Skulls.CELL_4.getPlayerHead(),
                 ThemeType.CRAFTING,
-                "Dank Cell - Tier 4",
-                "A Dank Cell serves to provide a way",
-                "to make the inside bigger than the",
-                "outside."
+                "无底单元 - 等级 4",
+                "无底单元可以在内部创建一个",
+                "比外部更大的空间"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -137,10 +133,9 @@ public class Materials {
                 "DK2_CELL_5",
                 Skulls.CELL_5.getPlayerHead(),
                 ThemeType.CRAFTING,
-                "Dank Cell - Tier 5",
-                "A Dank Cell serves to provide a way",
-                "to make the inside bigger than the",
-                "outside."
+                "无底单元 - 等级 5",
+                "无底单元可以在内部创建一个",
+                "比外部更大的空间"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -157,10 +152,9 @@ public class Materials {
                 "DK2_CELL_6",
                 Skulls.CELL_6.getPlayerHead(),
                 ThemeType.CRAFTING,
-                "Dank Cell - Tier 6",
-                "A Dank Cell serves to provide a way",
-                "to make the inside bigger than the",
-                "outside."
+                "无底单元 - 等级 6",
+                "无底单元可以在内部创建一个",
+                "比外部更大的空间"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -177,10 +171,9 @@ public class Materials {
                 "DK2_CELL_7",
                 Skulls.CELL_7.getPlayerHead(),
                 ThemeType.CRAFTING,
-                "Dank Cell - Tier 7",
-                "A Dank Cell serves to provide a way",
-                "to make the inside bigger than the",
-                "outside."
+                "无底单元 - 等级 7",
+                "无底单元可以在内部创建一个",
+                "比外部更大的空间"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -197,10 +190,9 @@ public class Materials {
                 "DK2_CELL_8",
                 Skulls.CELL_8.getPlayerHead(),
                 ThemeType.CRAFTING,
-                "Dank Cell - Tier 8",
-                "A Dank Cell serves to provide a way",
-                "to make the inside bigger than the",
-                "outside."
+                "无底单元 - 等级 8",
+                "无底单元可以在内部创建一个",
+                "比外部更大的空间"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -217,10 +209,9 @@ public class Materials {
                 "DK2_CELL_9",
                 Skulls.CELL_9.getPlayerHead(),
                 ThemeType.CRAFTING,
-                "Dank Cell - Tier ★",
-                "A Dank Cell serves to provide a way",
-                "to make the inside bigger than the",
-                "outside."
+                "无底单元 - 等级 ★",
+                "无底单元可以在内部创建一个",
+                "比外部更大的空间"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{

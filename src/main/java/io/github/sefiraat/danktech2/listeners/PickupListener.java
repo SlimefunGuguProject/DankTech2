@@ -68,7 +68,7 @@ public class PickupListener implements Listener {
 
         if (ConfigManager.getInstance().checkDankDeletion(instance.getId())) {
             player.sendMessage(MessageFormat.format(
-                "{0}A Dank Pack you have has been duped or deleted. Removing",
+                "{0}你拥有的一个无底背包已被复制或删除，正在移除",
                 ThemeType.ERROR.getColor())
             );
             pack.setAmount(0);
