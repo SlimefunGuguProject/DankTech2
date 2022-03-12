@@ -25,15 +25,15 @@ public class AdminGUI extends ChestMenu {
 
     protected static final ItemStack PAGE_BACK_STACK = new CustomItemStack(
         Material.PAPER,
-        MessageFormat.format("{0}Page Back", ThemeType.PASSIVE.getColor())
+        MessageFormat.format("{0}上一页", ThemeType.PASSIVE.getColor())
     );
     protected static final ItemStack PAGE_FORWARD_STACK = new CustomItemStack(
         Material.PAPER,
-        MessageFormat.format("{0}Page Forward", ThemeType.PASSIVE.getColor())
+        MessageFormat.format("{0}下一页", ThemeType.PASSIVE.getColor())
     );
     protected static final ItemStack EMPTY_STACK = new CustomItemStack(
         Material.LIGHT_GRAY_STAINED_GLASS_PANE,
-        MessageFormat.format("{0}Empty", ThemeType.PASSIVE.getColor())
+        MessageFormat.format("{0}空", ThemeType.PASSIVE.getColor())
     );
 
 
@@ -42,7 +42,7 @@ public class AdminGUI extends ChestMenu {
     private final int maxPages;
 
     public AdminGUI() {
-        super("Dank Admin");
+        super("无底存储管理");
 
         ChestMenuUtils.drawBackground(this, BACKGROUND_SLOTS);
 
@@ -139,15 +139,14 @@ public class AdminGUI extends ChestMenu {
         ItemMeta displayMeta = displayDank.getItemMeta();
         List<String> lore = displayMeta.getLore();
         lore.add("");
-        lore.add(MessageFormat.format("{0}Left Click: {1}Open Dank", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()));
-        lore.add(MessageFormat.format("{0}Right Click: {1}Clone Dank", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()));
+        lore.add(MessageFormat.format("{0}左键点击: {1}打开无底存储", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()));
+        lore.add(MessageFormat.format("{0}右键点击: {1}克隆无底存储", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()));
         lore.add("");
-        lore.add(MessageFormat.format("{0}Warning - Cloning a DankPack", ThemeType.ERROR.getColor()));
-        lore.add(MessageFormat.format("{0}will delete the original and", ThemeType.ERROR.getColor()));
-        lore.add(MessageFormat.format("{0}remove them from players inventories", ThemeType.ERROR.getColor()));
-        lore.add(MessageFormat.format("{0}and unloaders", ThemeType.ERROR.getColor()));
+        lore.add(MessageFormat.format("{0}警告 - 克隆无底存储会删除", ThemeType.ERROR.getColor()));
+        lore.add(MessageFormat.format("{0}原有的无底存储并从玩家的物品栏", ThemeType.ERROR.getColor()));
+        lore.add(MessageFormat.format("{0}中与无底卸载器中移除", ThemeType.ERROR.getColor()));
         lore.add("");
-        lore.add(MessageFormat.format("{0}Last User: {1}{2}", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor(), dankPackInstance.getLastUser()));
+        lore.add(MessageFormat.format("{0}最近玩家: {1}{2}", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor(), dankPackInstance.getLastUser()));
         displayMeta.setLore(lore);
         displayDank.setItemMeta(displayMeta);
         return displayDank;

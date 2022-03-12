@@ -34,20 +34,20 @@ public class TrashGUI extends ChestMenu {
 
     protected static final ItemStack EMPTY_STACK = new CustomItemStack(
         Skulls.GUI_EMPTY.getPlayerHead(),
-        MessageFormat.format("{0}Slot Empty", ThemeType.PASSIVE.getColor())
+        MessageFormat.format("{0}栏位为空", ThemeType.PASSIVE.getColor())
     );
     protected static final ItemStack LOCKED_STACK = new CustomItemStack(
         Material.RED_STAINED_GLASS_PANE,
-        MessageFormat.format("{0}Slot Locked", ThemeType.PASSIVE.getColor())
+        MessageFormat.format("{0}栏位已锁定", ThemeType.PASSIVE.getColor())
     );
     protected static final ItemStack INPUT_STACK = new CustomItemStack(
         Material.LIGHT_GRAY_STAINED_GLASS_PANE,
-        MessageFormat.format("{0}Input", ThemeType.PASSIVE.getColor())
+        MessageFormat.format("{0}输入", ThemeType.PASSIVE.getColor())
     );
     protected static final ItemStack INTERACTION_STACK = new CustomItemStack(
-        Skulls.GUI_WITHDRAW.getPlayerHead(), ThemeType.CLICK_INFO.getColor() + "Add/Withdraw Items",
+        Skulls.GUI_WITHDRAW.getPlayerHead(), ThemeType.CLICK_INFO.getColor() + "存入/取出物品",
         "",
-        MessageFormat.format("{0}Left Click: {1}Clear Filter", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor())
+        MessageFormat.format("{0}左键点击: {1}清除过滤器", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor())
     );
 
 
@@ -56,7 +56,7 @@ public class TrashGUI extends ChestMenu {
     private final TrashPack trashPack;
 
     public TrashGUI(TrashPackInstance packInstance, ItemStack itemStack) {
-        super("Dank Pack - Tier " + packInstance.getTier());
+        super("无底垃圾桶 - 等级 " + packInstance.getTier());
         this.packInstance = packInstance;
         this.itemStack = itemStack;
         this.trashPack = (TrashPack) SlimefunItem.getByItem(itemStack);

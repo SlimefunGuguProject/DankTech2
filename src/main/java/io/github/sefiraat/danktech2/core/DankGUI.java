@@ -39,15 +39,15 @@ public class DankGUI extends ChestMenu {
 
     protected static final ItemStack EMPTY_STACK = new CustomItemStack(
         Skulls.GUI_EMPTY.getPlayerHead(),
-        MessageFormat.format("{0}Slot Empty", ThemeType.PASSIVE.getColor())
+        MessageFormat.format("{0}栏位为空", ThemeType.PASSIVE.getColor())
     );
     protected static final ItemStack LOCKED_STACK = new CustomItemStack(
         Material.RED_STAINED_GLASS_PANE,
-        MessageFormat.format("{0}Slot Locked", ThemeType.PASSIVE.getColor())
+        MessageFormat.format("{0}栏位锁定", ThemeType.PASSIVE.getColor())
     );
     protected static final ItemStack INPUT_STACK = new CustomItemStack(
         Material.LIGHT_GRAY_STAINED_GLASS_PANE,
-        MessageFormat.format("{0}Input", ThemeType.PASSIVE.getColor())
+        MessageFormat.format("{0}输入", ThemeType.PASSIVE.getColor())
     );
 
 
@@ -56,7 +56,7 @@ public class DankGUI extends ChestMenu {
     private final DankPack dankPack;
 
     public DankGUI(DankPackInstance packInstance, ItemStack itemStack) {
-        super("Dank Pack - Tier " + packInstance.getTier());
+        super("无底背包 - 等级 " + packInstance.getTier());
         this.packInstance = packInstance;
         this.itemStack = itemStack;
         this.dankPack = (DankPack) SlimefunItem.getByItem(itemStack);
@@ -299,14 +299,14 @@ public class DankGUI extends ChestMenu {
 
     protected static ItemStack getInteractionStack(int amount) {
         return new CustomItemStack(
-            Skulls.GUI_WITHDRAW.getPlayerHead(), ThemeType.CLICK_INFO.getColor() + "Add/Withdraw Items",
+            Skulls.GUI_WITHDRAW.getPlayerHead(), ThemeType.CLICK_INFO.getColor() + "存入/取出物品",
             "",
-            MessageFormat.format("{0}Left Click: {1}Withdraw One", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
-            MessageFormat.format("{0}Right Click: {1}Withdraw Stack", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
-            MessageFormat.format("{0}Shift Left Click: {1}Input Whole Inventory", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
-            MessageFormat.format("{0}Shift Right Click: {1}Fill Inventory", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+            MessageFormat.format("{0}左键点击: {1}取出一个", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+            MessageFormat.format("{0}右键点击: {1}取出一组", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+            MessageFormat.format("{0}Shift+左键点击: {1}存入物品栏中所有对应物品", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+            MessageFormat.format("{0}Shift+右键点击: {1}取出物品并填充物品栏", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
             "",
-            MessageFormat.format("{0}Amount: {1}{2}", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor(), amount)
+            MessageFormat.format("{0}数量: {1}{2}", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor(), amount)
         );
     }
 
@@ -315,9 +315,9 @@ public class DankGUI extends ChestMenu {
             itemStack.clone(),
             MessageFormat.format("{0}Dank Pack Info", ThemeType.CLICK_INFO.getColor()),
             "",
-            MessageFormat.format("{0}Tier: {1}{2}", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor(), tier),
-            MessageFormat.format("{0}Slots: {1}{2}", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor(), tier),
-            MessageFormat.format("{0}Max Per Slot: {1}{2}", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor(), max)
+            MessageFormat.format("{0}等级: {1}{2}", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor(), tier),
+            MessageFormat.format("{0}当前栏位: {1}{2}", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor(), tier),
+            MessageFormat.format("{0}每个栏位最大储存数量: {1}{2}", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor(), max)
         );
     }
 }

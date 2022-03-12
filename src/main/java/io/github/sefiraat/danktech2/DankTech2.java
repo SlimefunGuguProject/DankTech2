@@ -15,7 +15,7 @@ import io.github.sefiraat.danktech2.utils.Keys;
 import io.github.sefiraat.danktech2.utils.datatypes.DataTypeMethods;
 import io.github.sefiraat.danktech2.utils.datatypes.PersistentDankInstanceType;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
+import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 import org.bstats.bukkit.Metrics;
 import org.bstats.charts.AdvancedPie;
 import org.bukkit.inventory.ItemStack;
@@ -37,15 +37,13 @@ public class DankTech2 extends JavaPlugin implements SlimefunAddon {
     private final String repo;
     private final String branch;
 
-    private GitHubBuildsUpdater updater;
-
     private ConfigManager configManager;
     private ListenerManager listenerManager;
     private SupportedPluginManager supportedPluginManager;
     private RunnableManager runnableManager;
 
     public DankTech2() {
-        this.username = "Sefiraat";
+        this.username = "ybw0014";
         this.repo = "DankTech2";
         this.branch = "master";
     }
@@ -55,7 +53,8 @@ public class DankTech2 extends JavaPlugin implements SlimefunAddon {
         instance = this;
 
         getLogger().info("########################################");
-        getLogger().info("         DankTech2 - By Sefiraat        ");
+        getLogger().info("            DankTech2 无底存储2           ");
+        getLogger().info("        作者: Sefiraat 汉化: ybw0014      ");
         getLogger().info("########################################");
 
         tryUpdate();
@@ -79,11 +78,9 @@ public class DankTech2 extends JavaPlugin implements SlimefunAddon {
 
     public void tryUpdate() {
         if (getConfig().getBoolean("auto-update")
-            && getDescription().getVersion().startsWith("DEV")
+            && getDescription().getVersion().startsWith("Build ")
         ) {
-            String updateLocation = MessageFormat.format("{0}/{1}/{2}", this.username, this.repo, this.branch);
-            updater = new GitHubBuildsUpdater(this, getFile(), updateLocation);
-            updater.start();
+            new GuizhanBuildsUpdater(this, getFile(), username, repo, branch, false).start();
         }
     }
 
