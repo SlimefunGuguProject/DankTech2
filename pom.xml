@@ -106,10 +106,16 @@
             <version>1.16.5-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
+        <!--dependency>
             <groupId>com.github.Slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
             <version>b8f7dc</version>
+            <scope>provided</scope>
+        </dependency-->
+        <dependency>
+            <groupId>com.github.StarWishsama</groupId>
+            <artifactId>Slimefun4</artifactId>
+            <version>1543157e4c</version>
             <scope>provided</scope>
         </dependency>
 
@@ -160,7 +166,7 @@
         <dependency>
             <groupId>net.guizhanss</groupId>
             <artifactId>GuizhanLib</artifactId>
-            <version>0.5.4</version>
+            <version>0.8.2</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
