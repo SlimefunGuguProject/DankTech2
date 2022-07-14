@@ -46,7 +46,7 @@ public class PackListener implements Listener {
 
         if (heldItem.getAmount() > 1) {
             player.sendMessage(MessageFormat.format(
-                "{0}Packs must be unstacked before use",
+                "{0}你不能在堆叠时使用",
                 ThemeType.WARNING.getColor())
             );
             return;
