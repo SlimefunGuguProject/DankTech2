@@ -10,7 +10,6 @@ import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.Unplaceabl
 import lombok.Getter;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 
