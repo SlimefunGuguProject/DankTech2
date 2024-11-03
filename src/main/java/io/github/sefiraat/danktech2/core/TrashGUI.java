@@ -154,13 +154,9 @@ public class TrashGUI extends ChestMenu {
             return false;
         }
         Material material = itemStack.getType();
-        if (material == Material.AIR) {
-            return false;
-        }
-        if (Tag.SHULKER_BOXES.isTagged(material)) {
-            return false;
-        }
-        if (material == Material.BUNDLE) {
+        if (material == Material.AIR
+                || Tag.SHULKER_BOXES.isTagged(material)
+                || material == Material.BUNDLE) {
             return false;
         }
 
